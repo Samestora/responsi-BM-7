@@ -1,0 +1,16 @@
+{
+    "name": "fartsmella/responsi-bm-7",
+    "description": "Responsi Bayern Munich",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Samestora"
+        }
+    ],
+    "require": {}
+}
