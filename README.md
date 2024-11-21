@@ -2,6 +2,20 @@
 
 # Fully native web app!
 
+## Contributors
+<table>
+    <tr>
+        <td>Putranto Surya Wijanarko</td>
+        <td>H1D023048</td>
+        <td>putranto.wijanarko@mhs.unsoed.ac.id</td>
+    </tr>
+    <tr>
+        <td>Nadzare Kafah Alfatiha</td>
+        <td>H1D023014</td>
+        <td>nadzare.alfatiha@mhs.unsoed.ac.id</td>
+    </tr>
+</table>
+
 ## Requirements
 - PHP (8.1.10)
 - MySQL (8.0.30)

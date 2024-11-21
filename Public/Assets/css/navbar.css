@@ -1,0 +1,63 @@
+.nav-button a{
+    font-family: Poppins-Medium;
+}
+
+.navbar h1 {
+    font-family: Poppins-Bold;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--red-bayern);
+    color: white;
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.nav-button a{
+    color: white;
+    text-decoration: none !important;
+}
+
+.nav-button {
+    margin: 10px;
+}
+
+.main-logo {
+    height: 5vw;
+    width: 5vw;
+}
+
+.signup-btn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 100px;
+    padding: 10px 0;
+    transition: 0.4s;
+    color: white;
+    background-color: var(--blue-bayern);
+}
+
+.login-btn{
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 600;
+    margin: 0 10px;
+    width: 100px;
+    padding: 10px 0;
+    transition: 0.4s;
+    color: white;
+    background-color: var(--red-bayern);
+}

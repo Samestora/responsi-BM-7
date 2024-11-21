@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include(__DIR__ . "/../Shortcodes/Header.php");?>
+    <link rel="stylesheet" href="/Assets/css/navbar.css">
     <title>Home</title>
 </head>
-
-<h1>Bayern Munich Ja??</h1>
-
-<ol>
-    <?php foreach ($Players as $Player) : ?>
-        <li><?= $Player->name ?> (<?= $Player->transferYear ?>)</li>
-    <?php endforeach; ?>
-</ol>
+<?php include(__DIR__ . "/../Shortcodes/Navbar.php"); ?>
+<body>
+    <h1>This Month's Recap</h1>
+    <?php include(__DIR__ . "/../Shortcodes/Footer.php");?>
+</body>

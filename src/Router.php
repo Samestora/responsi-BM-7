@@ -8,7 +8,6 @@ class Router
 
     private function addRoute($route, $controller, $action, $method)
     {
-
         $this->routes[$method][$route] = ['controller' => $controller, 'action' => $action];
     }
 
@@ -24,17 +23,29 @@ class Router
 
     public function dispatch()
     {
-        $uri = strtok($_SERVER['REQUEST_URI'], '?');
-        $method =  $_SERVER['REQUEST_METHOD'];
+        $uri = strtok($_SERVER['REQUEST_URI'], '?'); // Get URI without query string
+        $method = $_SERVER['REQUEST_METHOD']; // Get request method
 
-        if (array_key_exists($uri, $this->routes[$method])) {
+        // Forbidden route list
+        $forbiddenRoutes = ['/htaccess', '/forbidden'];
+
+        if (isset($this->routes[$method][$uri])) {
+            // If route exists, extract and call controller/action
             $controller = $this->routes[$method][$uri]['controller'];
             $action = $this->routes[$method][$uri]['action'];
 
             $controller = new $controller();
             $controller->$action();
+        } elseif (in_array($uri, $forbiddenRoutes)) {
+            // If URI matches forbidden list, render 403 page
+            http_response_code(403); // Set HTTP status to 403
+            include(__DIR__ . "/Views/403.php"); // Render custom 403 page
+            exit(); // Stop further execution
         } else {
-            throw new \Exception("No route found for URI: $uri");
+            // If no route matches, render the 404 page
+            http_response_code(404); // Set HTTP status to 404
+            include(__DIR__ . "/Views/404.php"); // Render custom 404 page
+            exit(); // Stop further execution
         }
     }
 }

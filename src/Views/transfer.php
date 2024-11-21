@@ -1,14 +1,12 @@
-<?php
-    include(__DIR__ . '/../Db/Connection.php');
-?>
+<?php include(__DIR__ . '/../Db/Connection.php'); ?>
 <!DOCTYPE html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php include(__DIR__ . "/../Shortcodes/Header.php");?>
+    <link rel="stylesheet" href="/Assets/css/navbar.css">
     <title>Transfer Simulator</title>
-    <link rel="stylesheet" href="/Assets/css/style.css"> 
 </head>
 <body>
+    <?php include(__DIR__ . "/../Shortcodes/Navbar.php"); ?>
     <table class="table-p">
         <tr>
             <th colspan='4'>
@@ -40,4 +38,5 @@
             }
         ?>
     </table>
+    <?php include(__DIR__ . "/../Shortcodes/Footer.php");?>
 </body>

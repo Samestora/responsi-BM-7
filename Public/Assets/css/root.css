@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+:root {
+    --blue-bayern: #0066B2 ;
+    --red-bayern: #DC052D;
+}
+
+@font-face {
+    font-family: Poppins-Medium;
+    src: url("/Assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Light;
+    src: url("/Assets/fonts/Poppins-Light.ttf");
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url("/Assets/fonts/Poppins-Bold.ttf");
+}
+
+.table-p tr td {
+    padding: 10px;
+    text-align: center;
+}

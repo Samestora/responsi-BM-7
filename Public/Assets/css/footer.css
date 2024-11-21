@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    background-color: var(--blue-bayern);
+}
+
+.footer-logo {
+    height: 4rem;
+    width: 4rem;
+}
+
+.footer a{
+    color: white;
+    text-decoration: none !important;
+}
+
+.footer-lcontainer {
+    display: flex;
+    width: 50%;
+}
+
+.footer-rcontainer {
+    display: flex;
+    width: 50%;
+}
