@@ -1,9 +1,20 @@
-<?php namespace db;
+<?php namespace App\Db;
     use PDO;
-    
-    $connection = mysqli_connect("localhost", "root", "", "bayern", "3306");
-    if($connection -> connect_errno){
-        echo "Failed to connect, check name, password, db_name and port!" . $connection -> connect_error;
-        exit();
+    use PDOException;
+
+    include(__DIR__ . '/../Dotenv.php');
+
+    $host = getenv('HOST');
+    $port = getenv('PORT');         
+    $username = getenv('USERNAME'); 
+    $password = getenv('PASSWORD'); 
+    $dbname = getenv('DBNAME');     
+
+    try {
+        $connection = new PDO("mysql:host=$host;dbname=$dbname;port=$port;", $username, $password);
+        $connection -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    } catch (PDOException $err) {
+        error_log($err->getMessage(), 3, 'logfile.log');
+        die("Database connection failed.");
     }
 ?>

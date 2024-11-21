@@ -11,7 +11,7 @@
 
 ## What's in this?
 [ ] Transfer Simulation  
-[ ]  Current Formation  
+[ ] Current Formation  
 [ ] Current Player and Manager  
 [ ] Leaderboards  
 [ ] Merchandise  
@@ -27,8 +27,8 @@ php -S localhost:8000
 ## Development
 FrontEnd :
 - Views/ (The directory for html stuffs)
-- Views/assets (CSS, JS, IMG, etc)
 - Views/* (Instead of about.php, it's about/index.php)
+- Public/Assets (CSS, JS, IMG, etc)
 - Public/ (Host there)
 
 BackEnd :
