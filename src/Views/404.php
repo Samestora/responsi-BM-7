@@ -13,7 +13,7 @@
     </div>
 
     <script>
-        var REQIRED_TIME_IN_MS=1000*5; // 10 s
+        var REQIRED_TIME_IN_MS=1000*30; // 10 s
         setTimeout(function(){
             window.location.href= "/";
         },REQIRED_TIME_IN_MS);

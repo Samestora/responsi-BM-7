@@ -9,11 +9,10 @@ class Home extends Controller
 {
     public function index()
     {
-        $Players = [
-            new Player('My Third Player Entry', '2023'),
-            new Player('My Second Player Entry', '2022'),
-            new Player('My First Player Entry', '2021')
-        ];
-        $this->render('index', ['Players' => $Players]);
+        $this->render('index', []);
+    }
+
+    public function notfound(){
+        $this->render('404', []);
     }
 }

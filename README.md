@@ -19,19 +19,28 @@
 ## Requirements
 - PHP (8.1.10)
 - MySQL (8.0.30)
-- Apache (2.4.54)
 - Composer
 > This can be done using laragon as per v.6.0-220916
 
 ## What's in this?
-[ ] Transfer Simulation  
-[ ] Current Formation  
-[ ] Current Player and Manager  
-[ ] Leaderboards  
-[ ] Merchandise  
+- [ ] Transfer Simulation
+- [ ] Current Formation
+- [ ] Current Player and Manager
+- [ ] Leaderboards
+- [ ] Merchandise
 
 ## How To Run
-Make sure that `composer` and `php executable` are installed, then :  
+Clone this repository
+```bash
+git clone https://github.com/Samestora/responsi-BM-7.git
+cd responsi-BM-7
+```
+
+Rename the environment variable and edit it as much as you like
+```bash
+mv src/example.env .env
+```
+Make sure that `composer` and `php executable` are installed, then
 ```bash
 cd Public
 composer dump-autoload
@@ -39,11 +48,14 @@ php -S localhost:8000
 ```
 
 ## Development
-FrontEnd :
+### FrontEnd :
 - Views/ (The directory for html stuffs)
 - Views/* (Instead of about.php, it's about/index.php)
 - Public/Assets (CSS, JS, IMG, etc)
 - Public/ (Host there)
+- Shortcodes/ (Reusable component)
 
-BackEnd :
-- The rest
+### BackEnd :
+- Migrate/ (DB structure and data)
+- Models/ (DB retrieved and sent data format)
+- Db/ (DB PDO Connection)

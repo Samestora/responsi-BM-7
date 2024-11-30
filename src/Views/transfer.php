@@ -1,4 +1,3 @@
-<?php include(__DIR__ . '/../Db/Connection.php'); ?>
 <!DOCTYPE html>
 <head>
     <?php include(__DIR__ . "/../Shortcodes/Header.php");?>
@@ -19,24 +18,15 @@
             <th>JERSEY NUMBER</th>
             <th>VALUE</th>
         </tr>
-        <?php
-            try {
-                // Query to fetch players from the database
-                $stmt = $connection->query("SELECT position, name, jersey, value FROM Players");
-                
-                // Loop through each row and populate the table
-                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-                    echo "<tr>";
-                    echo "<td>{$row['position']}</td>";
-                    echo "<td>{$row['name']}</td>";
-                    echo "<td>{$row['jersey']}</td>";
-                    echo "<td>{$row['value']}</td>";
-                    echo "</tr>";
-                }
-            } catch (PDOException $err) {
-                echo "<tr><td colspan='4'>Failed to load data: " . $err->getMessage() . "</td></tr>";
-            }
-        ?>
+        <?php foreach ($players as $player): ?>
+        <tr>
+            <td><?php echo $player->position; ?></td>
+            <td><?php echo $player->name; ?></td>
+            <td><?php echo $player->jersey; ?></td>
+            <td><?php echo $player->getFormattedValue(); ?></td>
+        </tr>
+        <?php endforeach; ?>
+
     </table>
     <?php include(__DIR__ . "/../Shortcodes/Footer.php");?>
 </body>

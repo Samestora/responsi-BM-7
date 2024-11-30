@@ -14,9 +14,6 @@
             <a href="/Transfer/" target="_top">Transfer</a>
         </div>
         <div class="nav-button">
-            <a href="/Merch/" target="_top">Merch</a>
-        </div>
-        <div class="nav-button">
             <button class="login-btn">Login</button>
         </div>
         <div class="nav-button">
