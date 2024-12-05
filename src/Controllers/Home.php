@@ -2,17 +2,26 @@
 
 namespace App\Controllers;
 
-use App\Controller;
-use App\Models\Player;
+use App\View;
 
-class Home extends Controller
+class Home
 {
-    public function index()
+
+    function index(): void
     {
-        $this->render('index', []);
+        $model = [
+            "title" => "Homes",
+            "content" => "Content"
+        ];
+
+        View::render('index', $model);
     }
 
-    public function notfound(){
-        $this->render('404', []);
+    function Error404(): void
+    {
+        $model = [
+            "title" => "404"
+        ];
+        View::render('404', $model);
     }
 }

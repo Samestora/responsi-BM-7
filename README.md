@@ -20,6 +20,7 @@
 - PHP (8.1.10)
 - MySQL (8.0.30)
 - Composer
+- Apache
 > This can be done using laragon as per v.6.0-220916
 
 ## What's in this?
@@ -46,6 +47,7 @@ cd Public
 composer dump-autoload
 php -S localhost:8000
 ```
+alternatively make your apache document root points out exactly to Public/ and then go to your localhost and specified port
 
 ## Development
 ### FrontEnd :

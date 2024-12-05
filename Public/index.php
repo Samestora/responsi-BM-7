@@ -3,15 +3,27 @@
 
     use App\Controllers\Home;
     use App\Controllers\Transfer;
+    use App\Controllers\Team;
+    use App\Controllers\Dashboard;
+    use App\Controllers\Registration;
+    use App\Middleware\AuthMiddleware;
     use App\Router;
 
-    $router = new Router();
 
-    $router->get('/404', Home::class, 'notfound');
-    $router->get('/', Home::class, 'index');
-    $router->get('/index.php', Home::class, 'index');
-    $router->get('/Transfer/', Transfer::class, 'index');
-    $router->get('/Transfer/index.php', Transfer::class, 'index');
+    Router::add('GET', '/', Home::class, 'index');
 
-    $router->dispatch();
+    Router::add('GET', '/account/login', Registration::class, 'login');
+    Router::add('POST', '/account/login', Registration::class, 'login');
+
+    Router::add('GET','/account/logout', Registration::class, 'logout');
+    Router::add('GET','/account/delete', Registration::class, 'logout');
+    Router::add('GET', '/account/signin', Registration::class, 'signin');
+
+    Router::add('GET','/dashboard', Dashboard::class, 'index');
+
+    Router::add('GET', '/transfer', Transfer::class, 'index');
+    Router::add('GET', '/team', Team::class, 'index');
+    Router::add('GET', '/404', Home::class, 'Error404');
+
+    Router::run();
 ?>

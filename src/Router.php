@@ -4,40 +4,54 @@ namespace App;
 
 class Router
 {
-    protected $routes = [];
+    private static array $routes = [];
 
-    private function addRoute($route, $controller, $action, $method)
+    public static function add(string $method,
+                               string $path,
+                               string $controller,
+                               string $function,
+                               array  $middlewares = []): void
     {
-        $this->routes[$method][$route] = ['controller' => $controller, 'action' => $action];
+        self::$routes[] = [
+            'method' => $method,
+            'path' => $path,
+            'controller' => $controller,
+            'function' => $function,
+            'middleware' => $middlewares
+        ];
     }
 
-    public function get($route, $controller, $action)
+    public static function run(): void
     {
-        $this->addRoute($route, $controller, $action, "GET");
-    }
-
-    public function post($route, $controller, $action)
-    {
-        $this->addRoute($route, $controller, $action, "POST");
-    }
-
-    public function dispatch()
-    {
-        $uri = strtok($_SERVER['REQUEST_URI'], '?'); // Get URI without query string
-        $method = $_SERVER['REQUEST_METHOD']; // Get request method
-
-        if (isset($this->routes[$method][$uri])) {
-            // If route exists, extract and call controller/action
-            $controller = $this->routes[$method][$uri]['controller'];
-            $action = $this->routes[$method][$uri]['action'];
-
-            $controller = new $controller();
-            $controller->$action();
-        }else {
-            // If no route matches, render the 404 page
-            http_response_code(404); // Set HTTP status to 404
-            header("Location: /404"); // Render custom 404 page
-            exit(); // Stop further execution
+        $path = '/';
+        if (isset($_SERVER['PATH_INFO'])) {
+            $path = $_SERVER['PATH_INFO'];
         }
+
+        $method = $_SERVER['REQUEST_METHOD'];
+
+        foreach (self::$routes as $route) {
+            $pattern = "#^" . $route['path'] . "$#";
+            if (preg_match($pattern, $path, $variables) && $method == $route['method']) {
+
+                // call middleware
+                foreach ($route['middleware'] as $middleware){
+                    $instance = new $middleware;
+                    $instance->before();
+                }
+
+                $function = $route['function'];
+                $controller = new $route['controller'];
+                // $controller->$function();
+
+                array_shift($variables);
+                call_user_func_array([$controller, $function], $variables);
+
+                return;
+            }
+        }
+
+        http_response_code(404);
+        header("Location:/404");
     }
 }
