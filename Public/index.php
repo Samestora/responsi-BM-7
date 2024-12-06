@@ -15,11 +15,14 @@
     Router::add('GET', '/account/login', Registration::class, 'login');
     Router::add('POST', '/account/login', Registration::class, 'login');
 
-    Router::add('GET','/account/logout', Registration::class, 'logout');
-    Router::add('GET','/account/delete', Registration::class, 'logout');
     Router::add('GET', '/account/signin', Registration::class, 'signin');
+    Router::add('POST', '/account/signin', Registration::class, 'signin');
 
+    Router::add('GET','/account/logout', Registration::class, 'logout');
+    Router::add('POST','/account/delete', Registration::class, 'delete');
+    
     Router::add('GET','/dashboard', Dashboard::class, 'index');
+    Router::add('POST', '/dashboard/update', Dashboard::class, 'update');
 
     Router::add('GET', '/transfer', Transfer::class, 'index');
     Router::add('GET', '/team', Team::class, 'index');

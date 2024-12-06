@@ -24,11 +24,10 @@
 > This can be done using laragon as per v.6.0-220916
 
 ## What's in this?
-- [ ] Transfer Simulation
-- [ ] Current Formation
-- [ ] Current Player and Manager
-- [ ] Leaderboards
-- [ ] Merchandise
+- [ ] Transfer Simulation (Transfer)
+- [ ] Current Formation (Team)
+- [x] Current Player and Manager (Team)
+- [ ] Leaderboards (Home)
 
 ## How To Run
 Clone this repository

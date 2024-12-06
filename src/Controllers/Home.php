@@ -10,7 +10,7 @@ class Home
     function index(): void
     {
         $model = [
-            "title" => "Homes",
+            "title" => "Home",
             "content" => "Content"
         ];
 

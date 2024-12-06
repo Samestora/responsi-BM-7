@@ -3,8 +3,8 @@ namespace App\Db;
 
 use PDO;
 use PDOException;
+use App\Utils\Dotenv;
 
-include(__DIR__ . '/../Dotenv.php');
 
 class Database
 {
@@ -12,6 +12,9 @@ class Database
 
     public static function getConnection()
     {
+        $env = new Dotenv(__DIR__ . '/../.env');
+        $env->load();
+
         if (self::$connection === null) {
             $host = getenv('HOST');
             $port = getenv('PORT');         

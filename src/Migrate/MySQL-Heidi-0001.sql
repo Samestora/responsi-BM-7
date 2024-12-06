@@ -21,7 +21,7 @@ USE `Bayern`;
 
 -- Dumping structure for table kanban_app_php_mvc.accounts
 CREATE TABLE IF NOT EXISTS `accounts` (
-  `id` int NOT NULL,
+  `id` CHAR(36) NOT NULL,
   `role_id` int NOT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,

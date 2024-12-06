@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS Accounts (
-    id          INT PRIMARY KEY,
+    id          CHAR(36) PRIMARY KEY,
     role_id     INT NOT NULL,
     name        VARCHAR(255) NOT NULL,
     email       VARCHAR(255) NOT NULL,
