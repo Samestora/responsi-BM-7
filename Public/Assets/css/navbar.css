@@ -1,39 +1,46 @@
-.nav-button a{
-    font-family: Poppins-Medium;
+.navbar {
+    /* padding: 0;
+    margin: 0;
+    border: 0; */
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--red-bayern);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
 }
 
-.navbar h1 {
+.navbar .sub-tem{
     font-family: Poppins-Bold;
 }
 
-.navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    background-color: var(--red-bayern);
+.navbar .sub-tem h1{
     color: white;
-    padding: 20px;
-}
-
-.navbar .container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.nav-button a{
-    color: white;
-    text-decoration: none !important;
-}
-
-.nav-button {
-    margin: 10px;
+    font-size: x-large;
 }
 
 .main-logo {
-    height: 5vw;
-    width: 5vw;
+    height: 6vw;
+    padding: 20px;
+    padding-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .menu a{
+    font-family: Poppins-Light;
+    font-size: 1rem;
+    color: white;
+    margin-left: 2rem;
+    text-decoration: none;
+}
+
+.logsig{
+    padding: 20px;
 }
 
 .signup-btn {

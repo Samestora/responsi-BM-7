@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -23,8 +24,8 @@
     font-family: Poppins-Bold;
     src: url("/Assets/fonts/Poppins-Bold.ttf");
 }
-
+/* 
 .table-p tr td {
     padding: 10px;
     text-align: center;
-}
+} */
