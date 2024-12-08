@@ -6,9 +6,9 @@
 <body>
     <?php include(__DIR__ . "/../../Shortcodes/Navbar.php"); ?>
     <?php if ($error === ''): ?>
-    <div style="display:flex;">
+    <div style="display:flex; justify-content: space-around;">
         <div>
-            <table class="table-p">
+            <table>
                 <tr>
                     <th colspan='5'>
                         <h2>Our Team</h2>
@@ -33,7 +33,7 @@
             </table>
         </div>
         <div>
-            <table class="table-p">
+            <table>
                 <tr>
                     <th colspan='5'>
                         <h2>Buy</h2>
