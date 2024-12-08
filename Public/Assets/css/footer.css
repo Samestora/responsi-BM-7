@@ -1,5 +1,13 @@
-footer {
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.footer {
+    padding: 20px;
+    left: 0;
+    width: 100%;
     display: flex;
+    justify-content: space-around;
+    align-items: center;
     background-color: var(--blue-bayern);
 }
 
@@ -8,18 +16,58 @@ footer {
     width: 4rem;
 }
 
-footer a{
+.footer a{
     color: white;
     text-decoration: none !important;
 }
 
 .footer-lcontainer {
     display: flex;
-    width: 50%;
-    align-items: center;
 }
 
 .footer-rcontainer {
+    color: white;
     display: flex;
-    width: 50%;
+
+}
+
+.footer-rcontainer ul {
+    list-style-type: none;
+}
+
+
+  
+.copy-right-sec{
+    padding: 1.2rem;
+    background: #003862;
+    color: #fff;
+    text-align: center;
+}
+.copy-right-sec a{
+    color: #fcd462;
+    font-weight: 500;
+}
+a{
+    text-decoration:none;
+}
+  
+
+
+.footer-lcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0.5rem 0 0.2rem;
+}
+
+.footer-desc {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0;
 }
