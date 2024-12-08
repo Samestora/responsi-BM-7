@@ -1,0 +1,3 @@
+CREATE TABLE IF NOT EXISTS Funds (
+    balance BIGINT NOT NULL
+);

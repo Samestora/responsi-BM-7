@@ -4,3 +4,5 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/Assets/css/root.css">
 <link rel="stylesheet" href="/Assets/css/footer.css">
+<link rel="stylesheet" href="/Assets/css/navbar.css">
+<title><?=$title?></title>

@@ -3,5 +3,8 @@ CREATE TABLE IF NOT EXISTS Players (
     position VARCHAR(255) NOT NULL,
     name    VARCHAR(255) NOT NULL,
     jersey  INT NOT NULL,
-    value   VARCHAR(255)
+    value   BIGINT NOT NULL,
+    club_id INT NOT NULL,
+    is_foreign BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (club_id) REFERENCES Clubs(id)
 );

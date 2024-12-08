@@ -5,6 +5,7 @@ Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
+wsl.env
 .env
 
 # Dump file
@@ -266,7 +267,7 @@ GitHub.sublime-settings
 tmtags
 
 ##### VisualStudioCode
-.vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

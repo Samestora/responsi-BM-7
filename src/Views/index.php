@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <head>
     <?php include(__DIR__ . "/../Shortcodes/Header.php");?>
-    <link rel="stylesheet" href="/Assets/css/navbar.css">
     <link rel="stylesheet" href="/Assets/css/caruosel.css">
     <link rel="stylesheet" href="/Assets/css/honor.css">
     <link rel="stylesheet" href="/Assets/css/news.css">
     <link rel="stylesheet" href="/Assets/css/team.css">
-    <title>Home</title>
 </head>
 <body>
     <?php include(__DIR__ . "/../Shortcodes/Navbar.php"); ?>
