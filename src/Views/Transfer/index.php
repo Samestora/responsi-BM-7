@@ -2,64 +2,25 @@
 <head>
     <?php include(__DIR__ . "/../../Shortcodes/Header.php");?>
     <link rel="stylesheet" href="/Assets/css/transfer.css">
+    <link rel="stylesheet" href="/Assets/css/slideshow.css">
 </head>
 <body>
     <?php include(__DIR__ . "/../../Shortcodes/Navbar.php"); ?>
+    
     <?php if ($error === ''): ?>
-    <div style="display:flex; justify-content: space-around;">
-        <div>
-            <table>
-                <tr>
-                    <th colspan='5'>
-                        <h2>Our Team</h2>
-                    </th>
-                </tr>
-                <tr>
-                    <th>POSITION</th>
-                    <th>NAME</th>
-                    <th>JERSEY NUMBER</th>
-                    <th>VALUE</th>
-                    <th>Club</th>
-                </tr>
-                <?php foreach ($ourplayers as $player): ?>
-                    <tr>
-                        <td><?= htmlspecialchars($player->position); ?></td>
-                        <td><?= htmlspecialchars($player->name); ?></td>
-                        <td><?= htmlspecialchars($player->jersey); ?></td>
-                        <td><?= htmlspecialchars($player->getFormattedValue()); ?></td>
-                        <td><img src="/Assets/images/Teams/<?= htmlspecialchars($player->club_id); ?>.svg" height="50"></td> 
-                    </tr>
-                <?php endforeach; ?>
-            </table>
+    <div style="display:flex; flex-direction: column;">
+        <div style="display:flex; justify-content: space-around;">
+            <?php include(__DIR__ . "/../../Shortcodes/SellPlayer.php"); ?>
+            <?php include(__DIR__ . "/../../Shortcodes/CurrentTransfer.php"); ?>
+            <div class="scrollable-div">
+                <?php include(__DIR__ . "/../../Shortcodes/Slideshow.php"); ?>
+                <?php include(__DIR__ . "/../../Shortcodes/BuyPlayer.php"); ?>
+            </div>
         </div>
-        <div>
-            <table>
-                <tr>
-                    <th colspan='5'>
-                        <h2>Buy</h2>
-                    </th>
-                </tr>
-                <tr>
-                    <th>POSITION</th>
-                    <th>NAME</th>
-                    <th>JERSEY NUMBER</th>
-                    <th>VALUE</th>
-                    <th>CLUB</th>
-                </tr>
-            <?php foreach ($foreignplayers as $player): ?>
-                <tr>
-                    <td><?= htmlspecialchars($player->position); ?></td>
-                    <td><?= htmlspecialchars($player->name); ?></td>
-                    <td><?= htmlspecialchars($player->jersey); ?></td>
-                    <td><?= htmlspecialchars($player->getFormattedValue()); ?></td>
-                    <td><img src="/Assets/images/Teams/<?= htmlspecialchars($player->club_id); ?>.svg" height="50"></td> 
-                </tr>
-            <?php endforeach; ?>
-            </table>
-        </div>
-        <div>
-            <h1>Revenue</h1>
-            <h2>$3000</h2>
+        <div style="display:flex; align-self: center; flex-direction: column; text-align: center;">
+            <h1>Budget</h1>
+            <h2><?= htmlspecialchars("€" . number_format($currentRevenue, 0, '.', ',')); ?></h2>
+            <button class="tr-commit">Commit Transaction</button>
         </div>
     </div>
     <?php else: ?>
@@ -68,4 +29,5 @@
     </h1>
     <?php endif; ?>
     <?php include(__DIR__ . "/../../Shortcodes/Footer.php");?>
+    <script src="/Assets/js/transferAjax.max.js"></script>
 </body>

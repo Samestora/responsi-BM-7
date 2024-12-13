@@ -25,6 +25,8 @@
     Router::add('POST', '/dashboard/update', Dashboard::class, 'update');
 
     Router::add('GET', '/transfer', Transfer::class, 'index');
+    Router::add('POST', '/transfer', Transfer::class, 'update');
+
     Router::add('GET', '/team', Team::class, 'index');
     Router::add('GET', '/404', Home::class, 'Error404');
 

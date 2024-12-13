@@ -1,33 +1,35 @@
-<img src="./image.jpg" style="display:flex; justify-content: center;" />  
+# FC Bayern Munchen Management App
+![Static Badge](https://img.shields.io/badge/Main-Passing-blue?logo=github)
+![Static Badge](https://img.shields.io/badge/Compose-Ready-blue?logo=docker)
 
-# Fully native web app!
+<img src="./image.jpg" style="display:flex; justify-content: center; align-items: center;" height=400/ alt="Pinterest">  
 
 ## Contributors
 <table>
     <tr>
-        <td>Putranto Surya Wijanarko</td>
-        <td>H1D023048</td>
-        <td>putranto.wijanarko@mhs.unsoed.ac.id</td>
-    </tr>
-    <tr>
         <td>Nadzare Kafah Alfatiha</td>
         <td>H1D023014</td>
-        <td>nadzare.alfatiha@mhs.unsoed.ac.id</td>
+        <td>nadzare.alfatiha@mhs.unsoed.ac.id</td><td>FrontEnd & UI/UX</td>
+    </tr>
+    <tr>
+        <td>Putranto Surya Wijanarko</td>
+        <td>H1D023048</td>
+        <td>putranto.wijanarko@mhs.unsoed.ac.id</td><td>BackEnd</td>
     </tr>
 </table>
 
 ## Requirements
 - PHP (8.1.10)
 - MySQL (8.0.30)
-- Composer
+- Composer (Only for autoload)
 - Apache
 > This can be done using laragon as per v.6.0-220916
 
 ## What's in this?
-- [ ] Transfer Simulation (Transfer)
+- [x] Transfer Simulation (Transfer)
 - [ ] Current Formation (Team)
 - [x] Current Player and Manager (Team)
-- [ ] Leaderboards (Home)
+- [x] Leaderboards (Home)
 
 ## How To Run
 Clone this repository
@@ -38,7 +40,7 @@ cd responsi-BM-7
 
 Rename the environment variable and edit it as much as you like
 ```bash
-mv src/example.env .env
+mv example.env .env
 ```
 Make sure that `composer` and `php executable` are installed, then
 ```bash

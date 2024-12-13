@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <head>
     <?php include(__DIR__ . "/../../Shortcodes/Header.php");?>
-    <link rel="stylesheet" href="/Assets/css/transfer.css">
 </head>
 <body>
     <?php include(__DIR__ . "/../../Shortcodes/Navbar.php"); ?>
