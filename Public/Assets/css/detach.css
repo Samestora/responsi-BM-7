@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    --blue-bayern: #0066B2;
+    --red-bayern: #DC052D;
+    --white: #fff;
+    --gray-bg: #f5f5f5;
+}
+
+.honours-section {
+    padding: 50px;
+    background-color: var(--white);
+    border-radius: 8px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.honours-section h1 {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--blue-bayern);
+}
+.honours-subtitle {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--red-bayern);
+}
+
+.honours-subtitle2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: var(--blue-bayern);
+}
+.honours-category {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.honours-category:last-child {
+    margin-bottom: 0;
+}
+
+/* Warna Kategori */
+.honours-category.blue-bg {
+    background-color: var(--blue-bayern);
+    color: var(--white);
+}
+
+.honours-category.red-bg {
+    background-color: var(--red-bayern);
+    color: var(--white);
+}
+
+.honours-category.white-bg {
+    background-color: var(--white);
+    color: #000;
+    border: 1px solid var(--gray-bg);
+}
+
+.honours-category.gray-bg {
+    background-color: var(--gray-bg);
+    color: #000;
+}
+
+/* Efek Hover */
+.honours-category:hover {
+    transform: translateY(-5px);
+}
+
+.honours-category.blue-bg:hover {
+    background-color: var(--red-bayern);
+}
+
+.honours-category.red-bg:hover {
+    background-color: var(--blue-bayern);
+}
+
+/* Flexbox Layout */
+.honours-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.honours-item {
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+    padding: 10px 0;
+    gap: 10px; 
+}
+
+.honours-item h3 {
+    flex: 1; 
+    margin: 0;
+    text-align: left;
+}
+
+.honours-item span {
+    flex-shrink: 0; 
+    font-size: 1em;
+    font-weight: bold;
+    text-align: right;
+}
+

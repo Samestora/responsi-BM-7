@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.member-table {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.table-p {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.table-p th, .table-p td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table-p th {
+    background-color: var(--blue-bayern);
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.table-p td {
+    background-color: #fdfdfd;
+}
+
+.table-p tr:nth-child(even) td {
+    background-color: #f4f4f4;
+}
+
+.table-p tr:hover td {
+    background-color: var(--red-bayern);
+    color: #fff;
+}
+
+.no-players {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+}

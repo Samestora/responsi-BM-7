@@ -2,6 +2,10 @@
 <head>
     <?php include(__DIR__ . "/../../Shortcodes/Header.php");?>
     <link rel="stylesheet" href="/Assets/css/transfer.css">
+    <link rel="stylesheet" href="/Assets/css/partner.css">
+    <link rel="stylesheet" href="/Assets/css/navbar.css">
+    <link rel="stylesheet" href="/Assets/css/header.css">
+    <link rel="stylesheet" href="/Assets/css/footer.css">
 </head>
 <body>
     <?php include(__DIR__ . "/../../Shortcodes/Navbar.php"); ?>
@@ -67,5 +71,6 @@
         <?= htmlspecialchars($error); ?>
     </h1>
     <?php endif; ?>
+    <?php include(__DIR__ . "/../../Shortcodes/Partner.php");?>
     <?php include(__DIR__ . "/../../Shortcodes/Footer.php");?>
 </body>

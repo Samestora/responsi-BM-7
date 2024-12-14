@@ -8,7 +8,9 @@
 :root {
     --blue-bayern: #0066B2 ;
     --red-bayern: #DC052D;
+    --white: #fff;
 }
+
 
 @font-face {
     font-family: Poppins-Medium;

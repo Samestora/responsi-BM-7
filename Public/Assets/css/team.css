@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .team-section {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 100%;
+    margin: 20px auto;
+    border-radius: 8px;
+  }
+  
+  .title-team-cuy {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: black;
+  }
+   
+  .team-subtitle-hah {
+    font-size: 1.3rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+  }
+  
+  .team-header p {
+    color: #666;
+  }
+  
+  .team-content {
+    margin: 20px 0;
+  }
+  
+  .team-photo {
+    max-width: 100%;
+    border-radius: 15px;
+  }
+  

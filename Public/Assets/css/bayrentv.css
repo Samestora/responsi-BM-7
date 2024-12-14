@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.bayern-tv {
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 35px;
+  background-color: #f8f8f8;
+
+}
+
+.container {
+  max-width: 88%;
+  margin: auto;
+}
+
+.bayern-tv-title {
+  margin-bottom: 5px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+.tv-subtitle {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: #aaa;
+}
+
+.bayern-tv-section {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto; 
+  scroll-behavior: smooth; 
+  padding-bottom: 20px;
+}
+
+.bayern-tv-section::-webkit-scrollbar {
+  height: 8px;
+}
+
+.bayern-tv-section::-webkit-scrollbar-thumb {
+  background: var(--blue-bayern);
+  border-radius: 4px;
+}
+
+.bayern-tv-section::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+.tv-card {
+  background: white;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease;
+  flex-shrink: 0; 
+}
+
+
+.tv-card:hover {
+  transform: scale(1.05);
+}
+
+.tv-card iframe {
+  width: 100%;
+  height: 180px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  object-fit: cover;
+}
+
+.tv-content {
+  padding: 10px;
+  font-size: 14px;
+  text-align: center;
+  color: #555;
+  line-height: 1.4;
+}

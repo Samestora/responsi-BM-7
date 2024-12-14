@@ -26,6 +26,8 @@
 
     Router::add('GET', '/transfer', Transfer::class, 'index');
     Router::add('GET', '/team', Team::class, 'index');
+    Router::add('GET', '/honor', Home::class, 'honor');
+    Router::add('GET', '/news', Home::class, 'news');
     Router::add('GET', '/404', Home::class, 'Error404');
 
     Router::run();

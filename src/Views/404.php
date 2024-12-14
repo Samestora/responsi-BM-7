@@ -2,6 +2,8 @@
 <head>
     <?php include(__DIR__ . "/../Shortcodes/Header.php");?>
     <link rel="stylesheet" href="/Assets/css/navbar.css">
+    <link rel="stylesheet" href="/Assets/css/partner.css">
+    <link rel="stylesheet" href="/Assets/css/footer.css">
     <title>404 Not Found</title>
 </head>
 <body>
@@ -18,4 +20,6 @@
             window.location.href= "/";
         },REQIRED_TIME_IN_MS);
     </script>
+        <?php include(__DIR__ . "/../Shortcodes/Partner.php");?>
+        <?php include(__DIR__ . "/../Shortcodes/Footer.php");?>
 </body>
