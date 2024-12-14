@@ -12,15 +12,15 @@ class Database
 
     public static function getConnection()
     {
-        $env = new Dotenv(__DIR__ . '/../.env');
+        $env = new Dotenv(__DIR__ . '/../../.env');
         $env->load();
 
         if (self::$connection === null) {
-            $host = getenv('HOST');
-            $port = getenv('PORT');         
-            $username = getenv('USERNAME'); 
-            $password = getenv('PASSWORD'); 
-            $dbname = getenv('DBNAME');     
+            $host = getenv('APP_HOST')?: 'localhost';
+            $port = getenv('APP_PORT')?: '3306';
+            $username = getenv('MYSQL_USER')?: 'root'; 
+            $password = getenv('MYSQL_PASSWORD')?: ''; 
+            $dbname = getenv('MYSQL_DATABASE')?:'Bayern';     
 
             try {
                 self::$connection = new PDO("mysql:host=$host;dbname=$dbname;port=$port;", $username, $password);

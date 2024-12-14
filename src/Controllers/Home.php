@@ -2,44 +2,18 @@
 
 namespace App\Controllers;
 
-use App\View;
+use App\Controller;
+use App\Models\Player;
 
-class Home
+class Home extends Controller
 {
-
-    function index(): void
+    public function index()
     {
-        $model = [
-            "title" => "Home",
-            "content" => "Content"
+        $Players = [
+            new Player('My Third Player Entry', '2023'),
+            new Player('My Second Player Entry', '2022'),
+            new Player('My First Player Entry', '2021')
         ];
-
-        View::render('index', $model);
-    }
-    function honor(): void
-    {
-        $model = [
-            "title" => "honor",
-            "content" => "Content"
-        ];
-
-        View::render('honor', $model);
-    }
-    function news(): void
-    {
-        $model = [
-            "title" => "news",
-            "content" => "Content"
-        ];
-
-        View::render('news', $model);
-    }
-
-    function Error404(): void
-    {
-        $model = [
-            "title" => "404"
-        ];
-        View::render('404', $model);
+        $this->render('index', ['Players' => $Players]);
     }
 }

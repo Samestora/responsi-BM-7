@@ -28,6 +28,9 @@
     Router::add('GET', '/team', Team::class, 'index');
     Router::add('GET', '/honor', Home::class, 'honor');
     Router::add('GET', '/news', Home::class, 'news');
+    Router::add('POST', '/transfer', Transfer::class, 'update');
+
+    Router::add('GET', '/team', Team::class, 'index');
     Router::add('GET', '/404', Home::class, 'Error404');
 
     Router::run();

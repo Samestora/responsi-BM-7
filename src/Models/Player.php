@@ -66,6 +66,11 @@ class Player
         }
     }
 
+    public static function getPlayerValueById($id){
+        $playerObj = Player::getPlayerById($id);
+        return $playerObj->value;
+    }
+
     public static function getAllPlayers()
     {
         $connection = Database::getConnection();  // Get PDO connection
@@ -101,7 +106,7 @@ class Player
         $connection = Database::getConnection();  // Get PDO connection
         try {
             // Query to fetch all players from the database
-            $query = "SELECT * FROM players WHERE is_foreign=FALSE";
+            $query = "SELECT * FROM players WHERE club_id=1";
             $stmt = $connection->prepare($query);
             $stmt->execute();
 
@@ -155,4 +160,45 @@ class Player
             return [];  // Return an empty array in case of error
         }
     }
+
+    public static function moveFromSquad(array $sell, array $buy)
+    {
+    $connection = Database::getConnection(); // Get PDO connection
+
+    try {
+        // Process sell transactions
+        foreach ($sell as $transaction) {
+            if (count($transaction) !== 2) {
+                throw new Exception("Invalid sell transaction data: " . json_encode($transaction));
+            }
+
+            [$playerId, $clubId] = $transaction;
+
+            $query = "UPDATE Players SET is_foreign = TRUE, club_id = :clubId WHERE id = :id";
+            $stmt = $connection->prepare($query);
+            $stmt->bindValue(":id", $playerId, PDO::PARAM_INT);
+            $stmt->bindValue(":clubId", $clubId, PDO::PARAM_INT);
+            $stmt->execute();
+        }
+
+        // Process buy transactions
+        foreach ($buy as $playerId) {
+            $query = "UPDATE Players SET is_foreign = FALSE, club_id = 1 WHERE id = :id";
+            $stmt = $connection->prepare($query);
+            $stmt->bindValue(":id", $playerId, PDO::PARAM_INT);
+            $stmt->execute();
+        }
+    } catch (PDOException $err) {
+        // Handle database errors
+        error_log("Database error: " . $err->getMessage());
+        return ['status' => 'error', 'message' => $err->getMessage()];
+    } catch (Exception $err) {
+        // Handle logical errors
+        error_log("Application error: " . $err->getMessage());
+        return ['status' => 'error', 'message' => $err->getMessage()];
+    }
+
+    return ['status' => 'success', 'message' => 'Transactions processed successfully'];
+}
+
 }
