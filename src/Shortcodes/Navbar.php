@@ -18,7 +18,7 @@
     <?php if (isset($_SESSION['logged_in'])) : ?> 
     <div class="logsig">
         <a href="/dashboard" >
-            <button>
+            <button class="login-new-btn">
                 <?= htmlspecialchars($_SESSION['logged_in']['name']) ?>
             </button>
         </a>

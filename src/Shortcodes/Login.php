@@ -24,7 +24,7 @@
                 <div>
                 <button name="submit">Login</button>
                 </div>
-                <p>Don't have an account yet? <a href="/account/signin">Sign in</a>.</p>
+                <p>Don't have an account yet? <a href="/account/signin" style="color: #0066B2;">Sign in</a></p>
             </form>
             <?php if (isset($error)):?>
                 <p>Invalid Password or Username</p>

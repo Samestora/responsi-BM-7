@@ -10,10 +10,10 @@
                 <a href="/">
                     <img src="/Assets/images/Bayern.svg" alt="Logo Bayern" class="foot-logo">
                 </a>
-                <h2>Bayern Munich</h2>
+                <h2 style="color: white;">Bayern Munich</h2>
                 </div>
-                <p><b>Professional Football Team</b></p>
-                <p>FC Bayern or simply Bayern, is a German professional sports club based in Munich, Bavaria. They are most known for their men's professional football team, who play in Bundesliga.</p>
+                <p style="text-align: center;"><b>Professional Football Team</b></p>
+                <p style="text-align: center;">FC Bayern or simply Bayern, is a German professional sports club based in Munich, Bavaria. They are most known for their men's professional football team, who play in Bundesliga.</p>
             </div>
             <hr>
             <div class="footer-center">

@@ -1,7 +1,7 @@
 <section id="teamSelector">
   <div id="cCarousel">
-    <div class="arrow" id="prev"><img src="/Assets/images/left.svg"></div>
-    <div class="arrow" id="next"><img src="/Assets/images/right.svg"></div>
+    <div id="prev"></div>
+    <div id="next"></div>
 
     <div id="carousel-vp">
       <div id="cCarousel-inner">

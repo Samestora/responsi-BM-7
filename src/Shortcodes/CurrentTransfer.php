@@ -1,6 +1,5 @@
 <!-- CURRENT -->
-<div>
-    <div class="scrollable-div-curr">
+<div class="scrollable-div-curr">
         <table class="currBuy_div">
             <thead>
         <tr>
@@ -20,8 +19,8 @@
         <tbody>
         </tbody>
         </table>
-    </div>
-    <div class="scrollable-div-curr">
+
+
         <table class="currSell_div">
         <thead>
         <tr>
@@ -41,6 +40,5 @@
         <tbody>
         </tbody>
         </table>
-    </div>
 </div>
 <!-- END OF CURRENT -->
