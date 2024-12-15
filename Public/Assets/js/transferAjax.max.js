@@ -84,17 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
             // Show the table
             table.hidden = false;
             teamSelector.hidden = true;
-
-            // Hide all rows first
-            const rows = tbody.querySelectorAll('tr');
-            rows.forEach(row => {
-                row.hidden = true;
-            });
+            const rows = document.querySelectorAll('#players-tbody tr');
+        rows.forEach(row => {
+            row.style.display = 'none';  // Hide all rows
+        });
 
             // Show rows matching the clubId
-            const matchingRows = tbody.querySelectorAll(`tr[data-club-id="${clubId}"]`);
+            const matchingRows = document.querySelectorAll(`#players-tbody tr[data-club-id="${clubId}"]`);
             matchingRows.forEach(row => {
-                row.hidden = false;
+                row.style.display = ''; 
             });
         });
     });

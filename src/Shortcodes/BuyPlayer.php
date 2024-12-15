@@ -21,7 +21,7 @@
     </thead>
     <tbody id="players-tbody">
     <?php foreach ($foreignplayers as $player): ?>
-        <tr class="player-pick"  data-club-id="<?= htmlspecialchars($player->club_id); ?>" id="<?= htmlspecialchars($player->club_id); ?>" hidden>
+        <tr class="player-pick"  data-club-id="<?= htmlspecialchars($player->club_id); ?>" id="<?= htmlspecialchars($player->club_id); ?>" style="display:none;">
             <td><button class="buy" name="<?= htmlspecialchars($player->id)?>">Buy</button></td>
             <td><?= htmlspecialchars($player->position); ?></td>
             <td><?= htmlspecialchars($player->name); ?></td>
