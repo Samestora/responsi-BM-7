@@ -1,0 +1,132 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Scrollable Container */
+.scrollable-div-buy {
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+    max-height: calc(100vh - 60px); /* Kontainer fleksibel dengan tinggi layar */
+    border-radius: 8px;
+    background-color: var(--gray-light);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Buy Player Table */
+.buy_div {
+    width: 100%; /* Tabel mengisi seluruh lebar kontainer */
+    border-collapse: collapse;
+    table-layout: auto; /* Kolom menyesuaikan konten */
+}
+
+/* Header Styles */
+.buy_div thead th {
+    background-color: var(--blue-bayern);
+    color: var(--white);
+    font-size: 0.75rem; /* Font lebih kecil untuk menyesuaikan */
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word; /* Bungkus teks panjang */
+    white-space: normal; /* Izinkan teks membungkus */
+    border: 1px solid var(--gray-border);
+    position: sticky; /* Header tetap terlihat saat scroll */
+    top: 0;
+    z-index: 2;
+}
+
+/* Body Styles */
+.buy_div tbody {
+    display: block;
+    max-height: 300px; /* Tinggi maksimum tabel */
+    overflow-y: auto; /* Scroll vertikal jika data lebih dari 4 */
+    width: 100%; /* Lebar penuh */
+    scrollbar-width: none; /* Hilangkan scrollbar di Firefox */
+}
+
+.buy_div tbody::-webkit-scrollbar {
+    display: none; /* Hilangkan scrollbar di browser WebKit */
+}
+
+.buy_div tr {
+    display: table;
+    width: 100%; /* Tabel akan tetap memenuhi kontainer */
+    table-layout: fixed; /* Kolom seragam */
+}
+
+.buy_div tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+.buy_div tbody tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+/* Cell Styles */
+.buy_div th, .buy_div td {
+    padding: 10px 8px; /* Padding lebih kecil untuk tampilan rapi */
+    border: 1px solid var(--gray-border);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.75rem; /* Perkecil font agar proporsional */
+    word-wrap: break-word; /* Bungkus teks dalam sel */
+    overflow: hidden;
+    white-space: normal; /* Izinkan pembungkusan teks */
+}
+
+/* Gambar dalam tabel */
+.buy_div tbody td img {
+    display: block;
+    margin: 0 auto;
+    height: 35px; /* Ukuran gambar lebih kecil */
+    width: auto;
+}
+
+/* Button Styling */
+.buy_div tbody td button.buy {
+    background-color: var(--blue-bayern);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px; /* Tombol lebih kecil */
+    font-size: 0.75rem; /* Ukuran font lebih kecil */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.buy_div tbody td button.buy:hover {
+    background-color: var(--hover-dark-red);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scrollable-div-buy {
+        max-height: calc(100vh - 40px); /* Tinggi lebih kecil untuk layar kecil */
+    }
+
+    .buy_div thead th {
+        font-size: 0.8rem;
+        padding: 8px 5px;
+    }
+
+    .buy_div tbody td {
+        font-size: 0.7rem;
+        padding: 6px 5px;
+    }
+
+    .buy_div tbody td img {
+        height: 30px; /* Perkecil gambar di layar kecil */
+    }
+
+    button.buy {
+        padding: 4px 8px; /* Tombol lebih kecil */
+        font-size: 0.7rem;
+    }
+}

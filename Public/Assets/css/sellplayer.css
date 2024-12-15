@@ -1,0 +1,149 @@
+/* Define root variables */
+:root {
+    --blue-bayern: #0066B2;
+    --red-bayern: #DC052D;
+    --white: #fff;
+    --gray-light: #f5f5f5;
+    --gray-border: #ddd;
+    --hover-dark-red: #a8001b;
+}
+
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.scrollable-div {
+    overflow-y: auto;
+    margin: 0 auto;
+    padding: 0;
+    width: 100%; /* Mengisi seluruh lebar layar */
+    height: calc(100vh - 60px); /* Kontainer responsif dengan tinggi layar */
+    border-radius: 8px;
+    background-color: var(--gray-light);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    max-height: 415px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sell_div {
+    width: 100%; /* Pastikan tabel memenuhi kontainer */
+    height: 100%;
+    overflow-y: auto; /* Scroll vertikal untuk data */
+}
+
+.sell_div table {
+    width: 100%; /* Tabel mengisi seluruh lebar */
+    border-collapse: collapse;
+    table-layout: auto; /* Kolom menyesuaikan konten */
+}
+
+/* Table styles */
+.sell_div thead th {
+    background-color: var(--blue-bayern);
+    color: var(--white);
+    padding: 10px 8px; /* Ukuran lebih kecil untuk layar kecil */
+    font-size: 0.75rem; /* Perkecil font header */
+    text-transform: uppercase;
+    text-align: center;
+    word-wrap: break-word; /* Bungkus teks panjang */
+    overflow: hidden;
+    white-space: normal; /* Izinkan teks membungkus */
+    border: 1px solid var(--gray-border);
+}
+
+.sell_div tbody tr {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sell_div tbody tr:nth-child(odd) {
+    background-color: var(--white);
+}
+
+.sell_div tbody tr:nth-child(even) {
+    background-color: #f0f8ff;
+}
+
+.sell_div th,
+.sell_div td {
+    padding: 10px 8px; /* Padding lebih kecil untuk elemen tabel */
+    border: 1px solid var(--gray-border);
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0.75rem; /* Ukuran font lebih kecil */
+    word-wrap: break-word; /* Bungkus teks jika terlalu panjang */
+    overflow: hidden;
+    white-space: normal; /* Izinkan teks membungkus */
+}
+
+.sell_div tbody td img {
+    display: block;
+    margin: 0 auto;
+    height: 35px; /* Perkecil ukuran gambar */
+    width: auto;
+}
+
+.sell_div tbody td button.sell {
+    background-color: var(--red-bayern);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px; /* Padding lebih kecil */
+    font-size: 0.75rem; /* Perkecil ukuran tombol */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.sell_div tbody td button.sell:hover {
+    background-color: var(--blue-bayern);
+}
+
+/* Budget Section */
+.budget-section {
+    margin: 10px auto;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--blue-bayern);
+    font-weight: bold;
+}
+
+.budget-section h3 {
+    margin: 10px 0 5px;
+    font-size: 1.25rem;
+    color: var(--red-bayern);
+}
+
+.budget-section p {
+    margin: 5px 0;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .scrollable-div {
+        height: calc(100vh - 40px); /* Kurangi tinggi untuk layar kecil */
+    }
+
+    .sell_div thead th {
+        font-size: 0.8rem;
+        padding: 8px 5px;
+    }
+
+    .sell_div tbody td {
+        font-size: 0.7rem; /* Ukuran font lebih kecil */
+        padding: 6px 5px;
+    }
+
+    .sell_div tbody td img {
+        height: 30px;
+    }
+
+    button.sell {
+        padding: 4px 8px; /* Tombol lebih kecil */
+        font-size: 0.7rem;
+    }
+}

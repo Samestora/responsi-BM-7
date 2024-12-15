@@ -1,95 +1,153 @@
+/* General Styling */
 #cCarousel {
   position: relative;
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 20px 0;
 }
 
 #cCarousel .arrow {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   display: flex;
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  z-index: 1;
-  font-size: 26px;
-  background: #00000072;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
 }
 
+#cCarousel .arrow img {
+  width: 18px;
+  height: 18px;
+}
+
+#cCarousel .arrow:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
 
 #cCarousel #prev {
-  left: 0px;
+  left: -10px;
 }
 
 #cCarousel #next {
-  right: 0px;
+  right: -10px;
 }
 
+/* Carousel Viewport */
 #carousel-vp {
   width: 770px;
-  height: 400px;
+  height: 350px;
   display: flex;
   align-items: center;
-  position: relative;
+  justify-content: center;
   overflow: hidden;
   margin: auto;
+  position: relative;
 }
 
 @media (max-width: 770px) {
   #carousel-vp {
     width: 510px;
+    height: 280px;
   }
 }
 
 @media (max-width: 510px) {
   #carousel-vp {
-    width: 250px;
+    width: 300px;
+    height: 220px;
   }
 }
 
+/* Carousel Inner */
 #cCarousel #cCarousel-inner {
   display: flex;
-  position: absolute;
-  transition: 0.3s ease-in-out;
-  gap: 10px;
-  left: 0px;
+  transition: transform 0.3s ease-in-out;
+  gap: 15px;
 }
 
 .cCarousel-item {
-  width: 250px;
-  height: 365px;
-  border: 2px solid white;
+  flex: 0 0 auto;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #ddd;
   border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
+  background: white;
   display: flex;
   flex-direction: column;
 }
 
 .cCarousel-item img {
-  width: 100%;
-  object-fit: cover;
-  min-height: 246px;
-  color: white;
+  width: 80%; /* Ukuran logo diperkecil */
+  height: auto;
+  margin: 10px auto; /* Membuat logo di tengah */
+  object-fit: contain;
+  background-color: #f9f9f9;
 }
 
 .cCarousel-item .infos {
-  height: 100%;
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background: white;
+  padding: 10px;
+  text-align: center;
 }
 
-.cCarousel-item .infos button{
-  background: #222;
-  padding: 10px 30px;
-  border-radius: 15px;
+.cCarousel-item .infos h3 {
+  font-size: 0.9rem; /* Ukuran nama tim diperkecil */
+  font-weight: bold;
+  color: black;
+  margin: 5px 0 10px;
+  text-transform: uppercase;
+  background-color: white;
+}
+
+.cCarousel-item .infos button {
+  background: #d32f2f;
   color: white;
-  font-size: 1rem;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.8rem; /* Tombol lebih kecil */
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.cCarousel-item .infos button:hover {
+  background: #b71c1c;
+}
+
+/* Style tombol panah */
+#cCarousel .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+#cCarousel .arrow:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+#cCarousel .arrow img {
+  width: 16px;
+  height: 16px;
 }
